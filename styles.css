@@ -8,23 +8,49 @@ body{
     color: #181818;
 }
 
-.selector-for-some-widget {
+selector-for-some-widget {
     box-sizing: content-box;
+}
+
+nav{
+    background-color: #E8E8E8
 }
 
 .navbar .navbar-brand .logo-img{
     margin-top: -4px;
 }
 
-.navbar .logo-text, .nav-item, button{
+/* .navbar .logo-text, .nav-item, button{
     font-weight: 700;
-}
+} */
 
 .navbar .navbar-nav .nav-item a{
     padding: 1rem;
 }
 
 .login-btn{
+    --bs-btn-padding-y: .5rem;
+    --bs-btn-padding-x: 1.25rem;
+    --bs-btn-font-size: 1;
+    background-color: #495464;
+}
+
+
+footer{
+    background-color: #BBBFCA;
+}
+
+footer a, footer p{
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.copyright-text{
     color: #181818;
-    font-weight: 650;
+    text-decoration: none;
+}
+
+.sosmed-icon{
+    color: #181818;
+    font-size: 1.5rem;
 }
