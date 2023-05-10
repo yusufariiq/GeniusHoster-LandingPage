@@ -1,0 +1,30 @@
+:root{
+    --bs-body-font-family: 'Inter', sans-serif;
+}
+
+body{
+    height: 5000px;
+    padding-top: 47px;
+    color: #181818;
+}
+
+.selector-for-some-widget {
+    box-sizing: content-box;
+}
+
+.navbar .navbar-brand .logo-img{
+    margin-top: -4px;
+}
+
+.navbar .logo-text, .nav-item, button{
+    font-weight: 700;
+}
+
+.navbar .navbar-nav .nav-item a{
+    padding: 1rem;
+}
+
+.login-btn{
+    color: #181818;
+    font-weight: 650;
+}
