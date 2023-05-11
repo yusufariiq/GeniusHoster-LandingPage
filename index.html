@@ -15,6 +15,7 @@
     </head>
     <body>
         <header>
+            <!-- Navbar -->
             <nav class="navbar navbar-expand-md fixed-top">
                 <div class="container-md">
                     <a class="navbar-brand" href="#">
@@ -68,23 +69,193 @@
                             </li>
                         </ul>
                         <form class="d-flex ms-auto me-3" role="search">
-                        <button class="btn btn-info-emphasis fw-semibold login-btn" type="submit">Login</button>
+                        <button class="btn fw-semibold login-btn" type="submit">Login</button>
                         </form>
                     </div>
                 </div>
             </nav>
 
             <main>
+                <!-- Showcase -->
                 <section class="p-5 text-center text-md-start showcase">
                     <div class="container d-flex align-items-center justify-content-center">
                         <div>
                             <h1 class="fw-bold">Get Your Business Online Now with <span class="text-info-emphasis">GeniusHoster</span></h1>
                             <p class="lead my-4">The best optimizations and provide quality web hosting the appearance of the latest control panels. Only at GeniusHoster can provide hosting with the best speed and security.</p>
-                            <button class="btn btn-secondary btn-lg fw-semibold showcase-btn"
+                            <button class="btn btn-lg fw-semibold showcase-btn"
                             data-bs-toggle="modal"
                             data-bs-target="#enroll"">Start Now</button>
                         </div>
                         <img class="img-fluid w-50 d-none d-md-block" src="assets/showcase.png" alt="Showcase">
+                    </div>
+                </section>
+
+                <!-- Pricing -->
+                <section id="pricing" class="m-3">
+                    <div class="container">
+                      <div class="text-center">
+                        <h2 class="text-center mb-2 fw-bold">Choose Your Web Hosting Plan</h2>
+                        <p class="text-center text-muted mb-4">Make sure your choose it's the one you need</p>
+                      </div>
+                
+                      <div class="row my-5 g-0 align-items-center justify-content-center">
+
+                        <div class="col-9 col-xl-4 p-4">
+                          <div class="card border-secondary border-2 rounded-4">
+                            <div class="card-body text-center py-5">
+                              <h4 class="card-title">Single Web Hosting</h4>
+                              <p class="lead card-subtitle">The perfect option for beginners</p>
+                              <p class="my-4"><span class="display-4 text-info-emphasis fw-bold">Rp 9.900</span>/mo</p>
+                              <ul class="list-group text-start list-group-flush">
+                                <p class="fs-5 fw-semibold text-center">Top Features</p>
+                                <li class="list-group-item card-text mx-5 text-muted">
+                                    <i class="fa-solid fa-circle-check mx-3"></i>
+                                    <span class="fw-bold ms-1">1</span> Website</li>
+                                <li class="list-group-item card-text mx-5 text-muted">
+                                    <i class="fa-solid fa-circle-check mx-3"></i>
+                                    <span class="fw-bold">50 GB</span> SSD Storage</li>
+                                <li class="list-group-item card-text mx-5 text-muted">
+                                    <i class="fa-solid fa-circle-check mx-3"></i>
+                                    <span class="fw-bold">100 GB</span> Bandwidth</li>
+                                <li class="list-group-item card-text mx-5 text-muted">
+                                    <i class="fa-solid fa-circle-check mx-3"></i>
+                                    <span class="fw-bold">Unlimited</span> Free SSL</li>
+                                <li class="list-group-item card-text mx-5 text-muted">
+                                    <i class="fa-solid fa-circle-check mx-3"></i>
+                                    <span class="fw-bold">Weekly</span> Backups</li>
+                              </ul>
+                              <a href="#" class="btn fw-semibold btn-lg mt-3 price-btn">
+                                Add to cart
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-9 col-xl-4 p-4">
+                            <div class="card border-secondary border-2 rounded-4">
+                                <div class="card-header text-center fw-semibold rounded-top-4">Most Popular</div>
+                                <div class="card-body text-center py-5">
+                                    <h4 class="card-title">Premium Web Hosting</h4>
+                                    <p class="lead card-subtitle">Great Package for personal website</p>
+                                    <p class="my-4"><span class="display-4 text-info-emphasis fw-bold">Rp 24.900</span>/mo</p>
+                                    <ul class="list-group text-start list-group-flush">
+                                        <p class="fs-5 fw-semibold text-center">Top Features</p>
+                                        <li class="list-group-item card-text mx-5 text-muted">
+                                            <i class="fa-solid fa-circle-check mx-3"></i>
+                                            <span class="fw-bold ms-1">100</span> Website</li>
+                                        <li class="list-group-item card-text mx-5 text-muted">
+                                            <i class="fa-solid fa-circle-check mx-3"></i>
+                                            <span class="fw-bold">100 GB</span> SSD Storage</li>
+                                        <li class="list-group-item card-text mx-5 text-muted">
+                                            <i class="fa-solid fa-circle-check mx-3"></i>
+                                            <span class="fw-bold">Unlimited</span> Bandwidth</li>
+                                        <li class="list-group-item card-text mx-5 text-muted">
+                                            <i class="fa-solid fa-circle-check mx-3"></i>
+                                            <span class="fw-bold">Free</span> Domain</li>
+                                        <li class="list-group-item card-text mx-5 text-muted">
+                                            <i class="fa-solid fa-circle-check mx-3"></i>
+                                            <span class="fw-bold">Unlimited</span> Free SSL</li>
+                                        <li class="list-group-item card-text mx-5 text-muted">
+                                            <i class="fa-solid fa-circle-check mx-3"></i>
+                                            <span class="fw-bold">Weekly</span> Backups</li>
+                                      </ul>
+                                    <a href="#" class="btn fw-semibold btn-lg mt-3 price-btn">
+                                      Add to cart
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-9 col-xl-4 p-4">
+                            <div class="card border-secondary border-2 rounded-4">
+                              <div class="card-body text-center py-5">
+                                <h4 class="card-title">Business Web Hosting</h4>
+                                <p class="lead card-subtitle">Made for small and medium businesses</p>
+                                <p class="my-4"><span class="display-4 text-info-emphasis fw-bold">Rp 49.900</span>/mo</p>
+                                <ul class="list-group text-start list-group-flush">
+                                    <p class="fs-5 fw-semibold text-center">Top Features</p>
+                                    <li class="list-group-item card-text mx-5 text-muted">
+                                        <i class="fa-solid fa-circle-check mx-3"></i>
+                                        <span class="fw-bold ms-1">100</span> Website</li>
+                                    <li class="list-group-item card-text mx-5 text-muted">
+                                        <i class="fa-solid fa-circle-check mx-3"></i>
+                                        <span class="fw-bold">200 GB</span> SSD Storage</li>
+                                    <li class="list-group-item card-text mx-5 text-muted">
+                                        <i class="fa-solid fa-circle-check mx-3"></i>
+                                        <span class="fw-bold">Unlimited</span> Bandwidth</li>
+                                    <li class="list-group-item card-text mx-5 text-muted">
+                                        <i class="fa-solid fa-circle-check mx-3"></i>
+                                        <span class="fw-bold">Free</span> Domain</li>
+                                    <li class="list-group-item card-text mx-5 text-muted">
+                                        <i class="fa-solid fa-circle-check mx-3"></i>
+                                        <span class="fw-bold">Unlimited</span> Free SSL</li>
+                                    <li class="list-group-item card-text mx-5 text-muted">
+                                        <i class="fa-solid fa-circle-check mx-3"></i>
+                                        <span class="fw-bold">Daily</span> Backups</li>
+                                  </ul>
+                                <a href="#" class="btn fw-semibold btn-lg mt-3 price-btn">
+                                  Add to cart
+                                </a>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!--  Accordion -->
+                <section class="p-5">
+                    <div class="container">
+                        <h2 class="text-center mb-2 fw-bold">Frequently Asked Question</h2>
+                        <p class="text-center text-muted mb-4">Find answers to frequently asked questions about shared website hosting</p>
+                        <div class="accordion my-5 mx-auto shadow rounded" id="accordionExample">
+                            
+                            <!-- Accordion 1 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button collapsed fs-65" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> Accordion Item #1</button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>This is the first item's accordion body</strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci officiis distinctio porro, perferendis quas recusandae ipsa unde eaque eveniet quae quam alias minus repudiandae eos nesciunt illum vel ut nemo, error ad laudantium placeat facere dolor! Sit, veniam ut? Nobis, animi atque! Cumque error impedit necessitatibus doloremque magnam magni ipsum.<code>Accordion Body</code>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <!-- Accordion 2 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed fs-65" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"> Accordion Item #2</button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>This is the second item's accordion body</strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci officiis distinctio porro, perferendis quas recusandae ipsa unde eaque eveniet quae quam alias minus repudiandae eos nesciunt illum vel ut nemo, error ad laudantium placeat facere dolor! Sit, veniam ut? Nobis, animi atque! Cumque error impedit necessitatibus doloremque magnam magni ipsum.<code>Accordion Body</code>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <!-- Accordion 3 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed fs-65" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree"> Accordion Item #3</button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>This is the third item's accordion body</strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci officiis distinctio porro, perferendis quas recusandae ipsa unde eaque eveniet quae quam alias minus repudiandae eos nesciunt illum vel ut nemo, error ad laudantium placeat facere dolor! Sit, veniam ut? Nobis, animi atque! Cumque error impedit necessitatibus doloremque magnam magni ipsum.<code>Accordion Body</code>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <!-- Accordion 4 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed fs-65" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour"> Accordion Item #4</button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>This is the forth item's accordion body</strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci officiis distinctio porro, perferendis quas recusandae ipsa unde eaque eveniet quae quam alias minus repudiandae eos nesciunt illum vel ut nemo, error ad laudantium placeat facere dolor! Sit, veniam ut? Nobis, animi atque! Cumque error impedit necessitatibus doloremque magnam magni ipsum.<code>Accordion Body</code>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </main>
