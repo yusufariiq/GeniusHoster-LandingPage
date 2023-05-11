@@ -2,8 +2,8 @@
     --bs-body-font-family: 'Inter', sans-serif;
 }
 
+/* GLOBAL */
 body{
-    height: 5000px;
     padding-top: 47px;
     color: #181818;
 }
@@ -12,8 +12,10 @@ selector-for-some-widget {
     box-sizing: content-box;
 }
 
+/* NAVBAR SECTION */
 nav{
-    background-color: #E8E8E8
+    background-color: #E8E8E8;
+    box-shadow: 0 .25rem .25rem rgba(0, 0, 0, .1);;
 }
 
 .navbar .navbar-brand .logo-img{
@@ -35,12 +37,31 @@ nav{
     background-color: #495464;
 }
 
+/* SHOWCASE SECTION  */
+.showcase{
+    height: 100vh;
+    background-color: #F4F4F2;
+}
 
+.showcase .container{
+    height: 100%;
+}
+
+.showcase .showcase-btn{
+    --bs-btn-padding-y: 1rem;
+    --bs-btn-padding-x: 2rem;
+    --bs-btn-font-size: 1.25rem;
+    background-color: #495464;
+}
+
+/* FOOTER SECTTION */
 footer{
     background-color: #BBBFCA;
 }
 
 footer a, footer p{
+    color: #181818;
+    text-decoration: none;
     font-weight: 400;
     font-size: 14px;
 }
