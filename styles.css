@@ -46,6 +46,38 @@ nav{
     color: #f7f7f7;
 }
 
+/* SEARCH SECTION */
+.search{
+    padding: 7rem 1rem;
+    background-color: #055160;
+    color: #f7f7f7;
+}
+
+.search .search-dropdown-btn{
+    background-color: #f7f7f7;
+    color: #252525;
+}
+
+.search .search-dropdown-btn:active,
+.search .search-dropdown-btn:focus{
+    background-color: #f7f7f7;
+    color: #252525;
+    border: none;
+}
+
+.search .search-btn{
+    background-color: #03272D;
+    color: #F7f7f7;
+}
+
+.search .search-sm-btn{
+    --bs-btn-padding-y: .5rem;
+    --bs-btn-padding-x: 7.75rem;
+    background-color: #03272D;
+    color: #F7f7f7;
+}
+
+
 /* SHOWCASE SECTION  */
 .showcase{
     height: 100vh;
@@ -100,6 +132,27 @@ nav{
     color: #f7f7f7;
 }
 
+/* TEMPLATE SECTION */
+.template-card img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: #055160;
+    width: 5vh;
+    height: 5vh;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media (min-width: 768px) {
+    .template-card img {
+      height: 11em;
+    }
+ }
 
 /* ACCORDION SECTION */
 .accordion{
