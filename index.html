@@ -11,6 +11,10 @@
         <link rel="stylesheet" href="styles.css">
         <link rel="icon" href="assets/LOGO.png" type="image/png">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
         <title>Genius Hoster</title>
     </head>
     <body>
@@ -18,10 +22,10 @@
             <!-- Navbar -->
             <nav class="navbar navbar-expand-md fixed-top">
                 <div class="container-md">
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="index.html">
                         <img src="assets/LOGO.png" alt="Logo" width="50" height="auto" class="d-inline-block logo-img">
                     </a>
-                    <a class="navbar-brand fw-bold" href="#">GeniusHoster</a>
+                    <a class="navbar-brand fw-bold" href="index.html">GeniusHoster</a>
                     
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -29,12 +33,6 @@
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav fw-semibold ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#pricing">Price</a>
-                              </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#templates">Template</a>
-                            </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#search" role="button" data-bs-toggle="dropdown" aria-expanded="false">Domain</a>
                                 <ul class="dropdown-menu">
@@ -42,17 +40,74 @@
                                 </ul>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#pricing">Price</a>
+                              </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#templates">Template</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="#FAQ">FAQ</a>
                             </li>
                         </ul>
                         <form class="d-flex ms-auto me-3" role="search">
-                        <button class="btn fw-semibold login-btn" type="submit">Login</button>
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn fw-semibold login-btn" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
                         </form>
                     </div>
                 </div>
             </nav>
 
             <main>
+                <!-- Modal Login -->
+                <section id="modal">
+                    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <img class="modal-title" src="assets/LOGO.png" alt="logo" width="50" height="55" id="modal-title">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+                                </div>
+                                <div class="modal-body d-flex justify-content-center align-items-center">
+                                    <div class="row">
+                                        <form>
+                                            <h5 class="fw-bold text-center mb-3" id="modal-title">Log In</h5>
+                                            <div class="form-floating my-2 shadow-sm">
+                                                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                                <label for="floatingInput">Email address</label>
+                                            </div>
+                                            
+                                            <div class="form-floating my-2 shadow-sm">
+                                                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                                                <label for="floatingPassword">Password</label>
+                                            </div>
+            
+                                            <div class="checkbox my-3 text-center">
+                                                <label>
+                                                <input type="checkbox" value="remember-me"> Remember me
+                                                </label>
+                                            </div>
+        
+                                            <button class="w-100 btn fw-semibold login-btn" type="submit">Log in</button>
+                                        </form>
+                                    </div>
+                                </div>
+
+                                <div class="modal-footer d-flex justify-content-center align-items-center">
+                                    <div class="row text-center">
+                                        <div class="input mb-1">
+                                            <p><a href="#" class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Forgot password?</a></p>
+                                        </div>
+                                        
+                                        <div class="col">
+                                            <p> Don't have an account?<a href="#" class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"> Create an account</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 <!-- Showcase -->
                 <section id="showcase" class="p-5 text-center text-md-start showcase">
                     <div class="container d-flex align-items-center justify-content-center">
@@ -111,28 +166,28 @@
                 
                       <div class="row my-5 g-0 align-items-center justify-content-center">
 
-                        <div class="col-12 col-xl-4 py-3 px-4">
+                        <div class="col-12 col-lg-4 py-3 px-4 px-lg-2">
                           <div class="card border-secondary border-2 rounded-4">
                             <div class="card-body text-center py-5">
                               <h4 class="card-title">Single Web Hosting</h4>
                               <p class="lead card-subtitle">The perfect option for beginners</p>
-                              <p class="my-4"><span class="display-4 text-info-emphasis fw-bold">Rp 79.900</span>/mo</p>
+                              <p class="my-4"><span class="display-4 text-info-emphasis fw-bold price-tag">Rp 79.900</span>/mo</p>
                               <ul class="list-group text-start list-group-flush">
                                 <p class="fs-5 fw-semibold text-center">Top Features</p>
-                                <li class="list-group-item card-text text-center text-sm-start mx-5 text-muted">
-                                    <i class="fa-solid fa-circle-check d-none d-sm-inline mx-3"></i>
+                                <li class="list-group-item card-text text-center text-sm-start mx-5 text-muted price-feature">
+                                    <i class="fa-solid fa-circle-check d-none d-sm-inline mx-3 mx-lg-1"></i>
                                     <span class="fw-bold">1</span> Website</li>
-                                <li class="list-group-item card-text text-center text-sm-start mx-5 text-muted">
-                                    <i class="fa-solid fa-circle-check d-none d-sm-inline mx-3"></i>
+                                <li class="list-group-item card-text text-center text-sm-start mx-5 text-muted price-feature">
+                                    <i class="fa-solid fa-circle-check d-none d-sm-inline mx-3 mx-lg-1"></i>
                                     <span class="fw-bold">50 GB</span> SSD Storage</li>
-                                <li class="list-group-item card-text text-center text-sm-start mx-5 text-muted">
-                                    <i class="fa-solid fa-circle-check d-none d-sm-inline mx-3"></i>
+                                <li class="list-group-item card-text text-center text-sm-start mx-5 text-muted price-feature">
+                                    <i class="fa-solid fa-circle-check d-none d-sm-inline mx-3 mx-lg-1"></i>
                                     <span class="fw-bold">100 GB</span> Bandwidth</li>
-                                <li class="list-group-item card-text text-center text-sm-start mx-5 text-muted">
-                                    <i class="fa-solid fa-circle-check d-none d-sm-inline mx-3"></i>
+                                <li class="list-group-item card-text text-center text-sm-start mx-5 text-muted price-feature">
+                                    <i class="fa-solid fa-circle-check d-none d-sm-inline mx-3 mx-lg-1"></i>
                                     <span class="fw-bold">Unlimited</span> Free SSL</li>
-                                <li class="list-group-item card-text text-center text-sm-start mx-5 text-muted">
-                                    <i class="fa-solid fa-circle-check d-none d-sm-inline mx-3"></i>
+                                <li class="list-group-item card-text text-center text-sm-start mx-5 text-muted price-feature">
+                                    <i class="fa-solid fa-circle-check d-none d-sm-inline mx-3 mx-lg-1"></i>
                                     <span class="fw-bold">Weekly</span> Backups</li>
                               </ul>
                               <a href="#" class="btn fw-semibold btn-lg mt-3 price-btn">
@@ -142,32 +197,32 @@
                           </div>
                         </div>
 
-                        <div class="col-12 col-xl-4 p-4">
+                        <div class="col-12 col-lg-4 py-3 px-4 px-lg-2">
                             <div class="card border-secondary border-2 rounded-4">
                                 <div class="card-header text-center fw-semibold rounded-top-4">Most Popular</div>
                                 <div class="card-body text-center py-5">
                                     <h4 class="card-title">Premium Web Hosting</h4>
                                     <p class="lead card-subtitle">Great Package for personal website</p>
-                                    <p class="my-4"><span class="display-4 text-info-emphasis fw-bold">Rp 124.900</span>/mo</p>
+                                    <p class="my-4"><span class="display-4 text-info-emphasis fw-bold price-tag">Rp 124.900</span>/mo</p>
                                     <ul class="list-group text-start list-group-flush">
                                         <p class="fs-5 fw-semibold text-center">Top Features</p>
-                                        <li class="list-group-item fs-6 fs-sm-2 card-text mx-5 text-muted">
-                                            <i class="fa-solid fa-circle-check d-none d-sm-inline mx-3"></i>
-                                            <span class="fw-bold ms-1">100</span> Website</li>
-                                        <li class="list-group-item card-text text-center text-sm-start mx-5 text-muted">
-                                            <i class="fa-solid fa-circle-check d-none d-sm-inline mx-3"></i>
+                                        <li class="list-group-item card-text text-center text-sm-start mx-5 text-muted price-feature">
+                                            <i class="fa-solid fa-circle-check d-none d-sm-inline mx-3 mx-lg-1"></i>
+                                            <span class="fw-bold">100</span> Website</li>
+                                        <li class="list-group-item card-text text-center text-sm-start mx-5 text-muted price-feature">
+                                            <i class="fa-solid fa-circle-check d-none d-sm-inline mx-3 mx-lg-1"></i>
                                             <span class="fw-bold">100 GB</span> SSD Storage</li>
-                                        <li class="list-group-item card-text text-center text-sm-start mx-5 text-muted">
-                                            <i class="fa-solid fa-circle-check d-none d-sm-inline mx-3"></i>
+                                        <li class="list-group-item card-text text-center text-sm-start mx-5 text-muted price-feature">
+                                            <i class="fa-solid fa-circle-check d-none d-sm-inline mx-3 mx-lg-1"></i>
                                             <span class="fw-bold">Unlimited</span> Bandwidth</li>
-                                        <li class="list-group-item card-text text-center text-sm-start mx-5 text-muted">
-                                            <i class="fa-solid fa-circle-check d-none d-sm-inline mx-3"></i>
+                                        <li class="list-group-item card-text text-center text-sm-start mx-5 text-muted price-feature">
+                                            <i class="fa-solid fa-circle-check d-none d-sm-inline mx-3 mx-lg-1"></i>
                                             <span class="fw-bold">Free</span> Domain</li>
-                                        <li class="list-group-item card-text text-center text-sm-start mx-5 text-muted">
-                                            <i class="fa-solid fa-circle-check d-none d-sm-inline mx-3"></i>
+                                        <li class="list-group-item card-text text-center text-sm-start mx-5 text-muted price-feature">
+                                            <i class="fa-solid fa-circle-check d-none d-sm-inline mx-3 mx-lg-1"></i>
                                             <span class="fw-bold">Unlimited</span> Free SSL</li>
-                                        <li class="list-group-item card-text text-center text-sm-start mx-5 text-muted">
-                                            <i class="fa-solid fa-circle-check d-none d-sm-inline mx-3"></i>
+                                        <li class="list-group-item card-text text-center text-sm-start mx-5 text-muted price-feature">
+                                            <i class="fa-solid fa-circle-check d-none d-sm-inline mx-3 mx-lg-1"></i>
                                             <span class="fw-bold">Weekly</span> Backups</li>
                                       </ul>
                                     <a href="#" class="btn fw-semibold btn-lg mt-3 price-btn">
@@ -176,31 +231,31 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-xl-4 p-4">
+                        <div class="col-12 col-lg-4 py-3 px-4 px-lg-2">
                             <div class="card border-secondary border-2 rounded-4">
                               <div class="card-body text-center py-5">
                                 <h4 class="card-title">Business Web Hosting</h4>
                                 <p class="lead card-subtitle">Made for small and medium businesses</p>
-                                <p class="my-4"><span class="display-4 text-info-emphasis fw-bold">Rp 149.900</span>/mo</p>
+                                <p class="my-4"><span class="display-4 text-info-emphasis fw-bold price-tag">Rp 149.900</span>/mo</p>
                                 <ul class="list-group text-start list-group-flush">
                                     <p class="fs-5 fw-semibold text-center">Top Features</p>
-                                    <li class="list-group-item card-text text-center text-sm-start mx-5 text-muted">
-                                        <i class="fa-solid fa-circle-check d-none d-sm-inline mx-3"></i>
-                                        <span class="fw-bold ms-1">100</span> Website</li>
-                                    <li class="list-group-item card-text text-center text-sm-start mx-5 text-muted">
-                                        <i class="fa-solid fa-circle-check d-none d-sm-inline mx-3"></i>
+                                    <li class="list-group-item card-text text-center text-sm-start mx-5 text-muted price-feature">
+                                        <i class="fa-solid fa-circle-check d-none d-sm-inline mx-3 mx-lg-1"></i>
+                                        <span class="fw-boldms-1">100</span> Website</li>
+                                    <li class="list-group-item card-text text-center text-sm-start mx-5 text-muted price-feature">
+                                        <i class="fa-solid fa-circle-check d-none d-sm-inline mx-3 mx-lg-1"></i>
                                         <span class="fw-bold">200 GB</span> SSD Storage</li>
-                                    <li class="list-group-item card-text text-center text-sm-start mx-5 text-muted">
-                                        <i class="fa-solid fa-circle-check d-none d-sm-inline mx-3"></i>
+                                    <li class="list-group-item card-text text-center text-sm-start mx-5 text-muted price-feature">
+                                        <i class="fa-solid fa-circle-check d-none d-sm-inline mx-3 mx-lg-1"></i>
                                         <span class="fw-bold">Unlimited</span> Bandwidth</li>
-                                    <li class="list-group-item card-text text-center text-sm-start mx-5 text-muted">
-                                        <i class="fa-solid fa-circle-check d-none d-sm-inline mx-3"></i>
+                                    <li class="list-group-item card-text text-center text-sm-start mx-5 text-muted price-feature">
+                                        <i class="fa-solid fa-circle-check d-none d-sm-inline mx-3 mx-lg-1"></i>
                                         <span class="fw-bold">Free</span> Domain</li>
-                                    <li class="list-group-item card-text text-center text-sm-start mx-5 text-muted">
-                                        <i class="fa-solid fa-circle-check d-none d-sm-inline mx-3"></i>
+                                    <li class="list-group-item card-text text-center text-sm-start mx-5 text-muted price-feature">
+                                        <i class="fa-solid fa-circle-check d-none d-sm-inline mx-3 mx-lg-1"></i>
                                         <span class="fw-bold">Unlimited</span> Free SSL</li>
-                                    <li class="list-group-item card-text text-center text-sm-start mx-5 text-muted">
-                                        <i class="fa-solid fa-circle-check d-none d-sm-inline mx-3"></i>
+                                    <li class="list-group-item card-text text-center text-sm-start mx-5 text-muted price-feature">
+                                        <i class="fa-solid fa-circle-check d-none d-sm-inline mx-3 mx-lg-1"></i>
                                         <span class="fw-bold">Daily</span> Backups</li>
                                   </ul>
                                 <a href="#" class="btn fw-semibold btn-lg mt-3 price-btn">
@@ -267,7 +322,7 @@
                         <div class="text-center mb-4">
                             <p class="text-small text-muted"> WEBSITE TEMPLATE</p>
                             <h2 class="text-center mb-1 mb-sm-2 fw-bold">Using a great design for your website</h2>
-                            <p class="text-center text-muted mb-1 mb-sm-4">GeniuhHoster provides an access of website templates. Choose one that matches your building style and get to work.</p>
+                            <p class="text-center text-muted mb-1 mb-sm-4">GeniusHoster provides an access of website templates. Choose one that matches your building style and get to work.</p>
                         </div>
                     <div id="carouselExample" class="carousel slide">
                         <div class="carousel-inner p-1">
@@ -277,21 +332,21 @@
                                         <img src="assets/template1.jpg" class="card-img-top" alt="AGEN-Z">
                                         <div class="card-body text-center">
                                             <h5 class="card-title fw-bold">Rentalio</h5>
-                                            <p class="card-text text-info-emphasis fw-medium">Car Rental</p>
+                                            <p class="card-text text-info-emphasis fw-medium">Car Rental Page</p>
                                         </div>
                                     </div>
                                     <div class="card rounded-3 shadow-sm template-card mx-2">
                                         <img src="assets/template2.jpeg" class="card-img-top" alt="AGEN-Z">
                                         <div class="card-body text-center">
                                             <h5 class="card-title fw-bold">AGEN-Z</h5>
-                                            <p class="card-text text-info-emphasis fw-medium">Media Agency</p>
+                                            <p class="card-text text-info-emphasis fw-medium">Media Agency Page</p>
                                         </div>
                                     </div>
                                     <div class="card rounded-3 shadow-sm template-card mx-2 d-none d-md-block">
                                         <img src="assets/template3.jpeg" class="card-img-top" alt="AGEN-Z">
                                         <div class="card-body text-center">
-                                            <h5 class="card-title fw-bold">Logitech Keyboard</h5>
-                                            <p class="card-text text-info-emphasis fw-medium">Product Electronic</p>
+                                            <h5 class="card-title fw-bold">Daily Clothes</h5>
+                                            <p class="card-text text-info-emphasis fw-medium">E-Commerce Page</p>
                                         </div>
                                     </div>
                                 </div>
@@ -301,22 +356,22 @@
                                     <div class="card rounded-3 shadow-sm template-card mx-2">
                                         <img src="assets/template4.jpeg" class="card-img-top" alt="AGEN-Z">
                                         <div class="card-body text-center">
-                                            <h5 class="card-title fw-bold">Original Trombones</h5>
-                                        <p class="card-text text-info-emphasis fw-medium">Musical Instrument Products</p>
+                                            <h5 class="card-title fw-bold">Fun Action</h5>
+                                        <p class="card-text text-info-emphasis fw-medium">Fantasy World Page</p>
                                         </div>
                                     </div>
                                     <div class="card rounded-3 shadow-sm template-card mx-2 d-none d-md-block">
-                                        <img src="assets/template4.jpeg" class="card-img-top" alt="AGEN-Z">
+                                        <img src="assets/template5.jpg" class="card-img-top" alt="AGEN-Z">
                                         <div class="card-body text-center">
-                                            <h5 class="card-title fw-bold">Rentalio</h5>
-                                            <p class="card-text text-info-emphasis fw-medium">Car Rental</p>
+                                            <h5 class="card-title fw-bold">Agensi</h5>
+                                            <p class="card-text text-info-emphasis fw-medium">Media Agency Page</p>
                                         </div>
                                     </div>
                                     <div class="card rounded-3 shadow-sm template-card mx-2 d-none d-md-block">
                                         <img src="assets/template6.jpg" class="card-img-top" alt="AGEN-Z">
                                         <div class="card-body text-center">
                                             <h5 class="card-title fw-bold">GS Wedding</h5>
-                                            <p class="card-text text-info-emphasis fw-medium">Wedding Organizer</p>
+                                            <p class="card-text text-info-emphasis fw-medium">Wedding Organizer Page</p>
                                         </div>
                                     </div>
                                 </div>
@@ -345,7 +400,7 @@
                             </div>
                         </div>
                         <div class="input-group input-group-lg">
-                            <input type="text" class="form-control" aria-label="Text input with segmented dropdown button" placeholder="Type your domain">
+                            <input id="domain-search" type="text" class="form-control" aria-label="Text input with segmented dropdown button" placeholder="Type your domain">
                             <button class="btn btn-sm btn-sm-lg search-dropdown-btn dropdown-toggle rounded-end " type="button" data-bs-toggle="dropdown" aria-expanded="false">.com</button>
                             <ul class="dropdown-menu dropdown-menu-end">
                                 <li><a class="dropdown-item" href="#">.com</a></li>
@@ -489,34 +544,82 @@
                 </section>
 
                 <!-- Testimonial -->
-                <section id="testimonial" class="py-5 my-3 services">
+                <section id="testimonial" class="py-5 mb-5 testimonial">
                     <div class="container">
                         <h2 class="text-center my-5 fw-bold">What they think about our services?</h2>
                         <div class="row row-cols-1 row-cols-md-3 g-4">
                             <div class="col">
-                                <div class="card py-4 px-3">
-                                  <span class="text-center"><i class="fas fa-palette fa-5x"></i></span>
+                                <div class="card h-100">
                                     <div class="card-body">
-                                        <h5 class="card-title">Cloud Storage (NVMe SSD)</h5>
-                                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                                        <div class="rating-star">
+                                            <i class="fa-solid fa-star fa-sm-xl"></i>
+                                            <i class="fa-solid fa-star fa-sm-xl"></i>
+                                            <i class="fa-solid fa-star fa-sm-xl"></i>
+                                            <i class="fa-solid fa-star fa-sm-xl"></i>
+                                            <i class="fa-solid fa-star fa-sm-xl"></i>
+                                        </div>
+                                        <p class="card-text my-4">I was very impressed by GeniusHoster's amazing customer service and simple migration from my old host provider.</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="row g-0">
+                                            <div class="col-4">
+                                                <img src="assets/person1.jpg" alt="" class="rounded-circle img-fluid w-75">
+                                            </div>
+                                            <div class="col-8 mx-0 my-auto">
+                                                <h5 class="fw-semibold">Nevaeh Slater</h5>
+                                                <p class="text-muted">Web Developer</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col">
-                                <div class="card py-4 px-3">
-                                  <span class="text-center"><i class="fas fa-palette fa-5x"></i></span>
+                                <div class="card h-100">
                                     <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                                        <div class="rating-star">
+                                            <i class="fa-solid fa-star fa-sm-xl"></i>
+                                            <i class="fa-solid fa-star fa-sm-xl"></i>
+                                            <i class="fa-solid fa-star fa-sm-xl"></i>
+                                            <i class="fa-solid fa-star fa-sm-xl"></i>
+                                            <i class="fa-solid fa-star fa-sm-xl"></i>
+                                        </div>
+                                        <p class="card-text my-4">Support is what I value most. Your experts were always available to help me immediately.</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="row g-0">
+                                            <div class="col-4">
+                                                <img src="assets/person2.jpg" alt="" class="rounded-circle img-fluid w-75">
+                                            </div>
+                                            <div class="col-8 mx-0 my-auto">
+                                                <h5 class="fw-semibold">Katherine Owen</h5>
+                                                <p class="text-muted">UI/UX Designer</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col">
-                                <div class="card py-4 px-3">
-                                  <span class="text-center"><i class="fas fa-palette fa-5x"></i></span>
+                                <div class="card h-100">
                                     <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                                        <div class="rating-star">
+                                            <i class="fa-solid fa-star fa-sm-xl"></i>
+                                            <i class="fa-solid fa-star fa-sm-xl"></i>
+                                            <i class="fa-solid fa-star fa-sm-xl"></i>
+                                            <i class="fa-solid fa-star fa-sm-xl"></i>
+                                            <i class="fa-solid fa-star fa-sm-xl"></i>
+                                        </div>
+                                        <p class="card-text my-4">In order to have the best performance, I wanted a hosting company that is very user-friendly for beginners.</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="row g-0">
+                                            <div class="col-4">
+                                                <img src="assets/person3.jpg" alt="" class="rounded-circle img-fluid h-750 w-75">
+                                            </div>
+                                            <div class="col-8 mx-0 my-auto">
+                                                <h5 class="fw-semibold">Hendriyan David</h5>
+                                                <p class="text-muted">Entrepreneur</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -573,7 +676,7 @@
                         </div>
                         
 
-                        <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
+                        <div class="col-md-4 col-lg-4 col-lg-4 mx-auto mt-3">
                             <h5 class="mb-4 fw-bold">Contact</h5>
                                 <p><i class="fa-solid fa-location-dot me-3"></i> Jl. Letjen M.T. Haryono, No.5, Daerah Khusus Ibukota Jakarta, 12780</p>
                                 <p><i class="fa-brands fa-whatsapp fa-lg me-3"></i>081213141516</p>
@@ -584,7 +687,7 @@
 
                         <div class="row align-items-center">
                             <div class="col-md-7 col-lg-8">
-                                <p>Copyright 2023 All rights reserved by:
+                                <p>&copy; Copyright 2023 All rights reserved by:
                                     <a href="#" class="fw-bold copyright-text" >GeniusHoster</a>
                                 </p>
                             </div>
@@ -615,5 +718,6 @@
         </header>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
         <script src="https://kit.fontawesome.com/fbfa0f6133.js" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
     </body>
 </html>
